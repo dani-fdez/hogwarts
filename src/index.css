@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 36% 98%;
+    --foreground: 35 36% 4%;
+    --card: 40 36% 98%;
+    --card-foreground: 35 36% 4%;
+    --popover: 40 36% 98%;
+    --popover-foreground: 35 36% 4%;
+    --primary: 35 92% 33%;
+    --primary-foreground: 40 36% 98%;
+    --secondary: 35 36% 90%;
+    --secondary-foreground: 35 36% 4%;
+    --muted: 35 36% 90%;
+    --muted-foreground: 35 36% 45%;
+    --accent: 35 36% 90%;
+    --accent-foreground: 35 36% 4%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 40 36% 98%;
+    --border: 35 36% 85%;
+    --input: 35 36% 85%;
+    --ring: 35 92% 33%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 35 36% 8%;
+    --foreground: 40 36% 98%;
+    --card: 35 36% 8%;
+    --card-foreground: 40 36% 98%;
+    --popover: 35 36% 8%;
+    --popover-foreground: 40 36% 98%;
+    --primary: 35 92% 43%;
+    --primary-foreground: 35 36% 8%;
+    --secondary: 35 36% 15%;
+    --secondary-foreground: 40 36% 98%;
+    --muted: 35 36% 15%;
+    --muted-foreground: 35 36% 65%;
+    --accent: 35 36% 15%;
+    --accent-foreground: 40 36% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 40 36% 98%;
+    --border: 35 36% 15%;
+    --input: 35 36% 15%;
+    --ring: 35 92% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: url('https://images.unsplash.com/photo-1585521551385-0fc6db101e3d?q=80&w=2070');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
